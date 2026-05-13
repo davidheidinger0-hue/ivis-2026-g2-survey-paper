@@ -1,0 +1,81 @@
+%----------------------------------------------------------------
+%
+%  File    :  survey-background.tex
+%
+%  Author  :  Lukas Auer, David Heidinger, Nina Tschikof and Christina Vogel, TU Graz, Austria
+% 
+%  Created :  5 May 2026
+% 
+%  Changed :  5 May 2026
+% 
+%----------------------------------------------------------------
+
+
+\chapter{Background and Motivation}
+
+\label{chap:Background}
+ In the following chapter the importance and common issues with dishonest chart techniques will be discussed.
+
+
+\section{Role of Data Visualisation}
+
+Data visualisation has become an essential tool for exploring, analysing and communicating complex datasets to people \cite{tufte2001,cairo2019}. By transforming numerical or categorical data into visual representations it enables users to identify patterns, trends and relationships that would be difficult to detect through raw data alone.
+
+The effectiveness of data visualisation is largely based on the ability of human visual perception. Humans are particularly skilled at detecting differences in position, length and colour. This allows them to quickly interpret visual encodings. Compared to textual or numerical representations, visualisations can significantly reduce cognitive load and improve comprehension.
+
+As a result, visualisations are widely used across various domains including scientific research, journalism, media or politics. In many of these areas visualisations are not only used to present data but also to support decision-making processes or to support desired outcomes.
+
+However, this widespread use also increases the impact of potential misrepresentations. Because visualisations are often perceived as intuitive and objective viewers may trust them without critically questioning how they were constructed or look at the in detail \cite{cairo2019}.
+
+\section{Subjectivity and Bias in Data Representation}
+
+Despite their apparent objectivity data visualisations are inherently subjective. Every step in the visualisation process involves decisions that influence how the data is ultimately presented. These decisions include data selection, filtering, aggregation, scaling and the choice of visual encodings \cite{cairo2019}.
+
+Bias can be introduced at multiple stages of this process. During data collection certain variables may be omitted or overrepresented. During preprocessing the data may be cleaned or transformed in ways that affect its interpretation. Finally, during the design of the  visualisation certain choices as axis scaling, colour mapping or chart type can further shape how the data is perceived by the audience.
+
+For example, selecting a specific time range may highlight or hide trends while grouping data into categories may obscure underlying variability. Similarly, the use of certain colour schemes can emphasise or downplay specific values.
+
+These examples illustrate that visualisations do not provide a neutral view of data. Instead, they represent a constructed perspective shaped by human decisions. More representation techniques will be discussed in more detail in chapter 3.  Recognising this subjectivity is crucial for critically evaluating visualisations and avoiding misleading interpretations.
+
+\section{Definition and Characteristics of Dishonest Chart Techniques}
+
+Dishonest chart techniques can be defined as visualisation practices that lead viewers to a misinterpretation of the underlying data. These techniques do not necessarily involve incorrect data but rather misleading representations of otherwise valid data \cite{cairo2019,tufte2001}.
+
+Such techniques can occur unintentionally due to a lack of expertise in visualisation design, or intentionally in order to influence the viewer’s perception and support a particular narrative. In both cases the result is a distortion of how the data is interpreted.
+
+A key characteristic of dishonest chart techniques is that they exploit limitations in human perception and cognition. Viewers tend to assume that visual representations are proportional to the data they encode \cite{cleveland1984}. At a first glance they may for example interpret the length of a bar or the area of a shape as directly corresponding to a numerical value even when this relationship is manipulated. 
+
+Common forms of distortion include exaggerating differences, compressing variability, hiding relevant context or selectively presenting data. These distortions can significantly alter the perceived importance or meaning of the data.
+
+Importantly, dishonest techniques are often subtle and difficult to detect. This makes them particularly problematic as viewers may not be aware that their interpretation is being influenced.
+
+\section{Cognitive and Perceptual Effects}
+
+The effectiveness of dishonest chart techniques is closely related to how humans process visual information \cite{cleveland1984}. Cognitive psychology has shown that individuals rely heavily on visual cues when interpreting data often using heuristics rather than detailed analytical reasoning  \cite{kahneman2011}.
+
+For example, viewers may focus on prominent visual features such as large shapes, bright colours or steep slopes even if these features do not accurately reflect the underlying data. Similarly, they may overlook missing information such as omitted baselines or hidden uncertainty.
+
+Certain visual encodings are also more prone to misinterpretation than others. While position and length are generally perceived more accurately, area and volume are often misjudged \cite{cleveland1984}. This makes techniques that manipulate size or perspective particularly effective at misleading viewers.
+
+Additionally, cognitive biases such as confirmation bias can amplify the effects of dishonest visualisations. People may be more likely to accept misleading representations if they align with their existing beliefs.
+
+These perceptual and cognitive factors explain why even small distortions in visualisation design can have a significant impact on interpretation.
+
+\section{Impact on Interpretation and Decision-Making}
+
+Misleading visualisations can have far-reaching consequences for interpretation and decision-making \cite{cairo2019}. Since visualisations are frequently used to communicate important information distortions in their design can influence how people understand and act on data.
+
+In domains such as politics, finance or healthcare decisions are often based on visualised data. Misrepresentations in these contexts can lead to incorrect conclusions, poor decision-making or the spread of misinformation.
+
+For example, exaggerated trends may create a false sense of urgency while concealed variability may suggest a level of certainty that does not exist. Similarly, selective data presentation can support misleading narratives and influence public opinion.
+
+The increasing use of data visualisations in digital media further amplifies these risks. Visualisations are often shared widely through media and consumed quickly leaving little space for critical evaluation.
+
+Therefore, it is essential to improve awareness of how visualisations can mislead and to promote more responsible design practices.
+
+
+
+
+
+
+

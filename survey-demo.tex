@@ -1,0 +1,67 @@
+%----------------------------------------------------------------
+%
+%  File    :  survey-demo.tex
+%
+%  Author  :   Lukas Auer, David Heidinger, Nina Tschikof and Christina Vogel, TU Graz, Austria
+% 
+% 
+%  Created :  06 May 2026
+% 
+%  Changed :  10 May 2026
+% 
+%----------------------------------------------------------------
+
+
+\chapter{Implementation of Interactive Demonstrations}
+\label{chap:Presentation}
+
+The following chapter will explore how the interactive demonstrations of the dishonest chart techniques were created.
+
+\section{Design Goals}
+The primary design goal for the demonstrations was to make the abstract concepts of chart manipulation tangible and easy to understand. Instead of just showing static "before and after" pictures, the demonstrations were designed to let users experience the distortion firsthand. 
+\\\\
+By using interactive elements like sliders and toggle switches, the viewer can actively change the parameters of a chart—such as the number of bins, the y-axis starting point, or the scale of the axes. This hands-on approach allows the audience to see in real-time how a perfectly normal dataset can slowly transform into a highly misleading visualisation. The goal was to prove that you do not need to change the raw data to tell a completely different story, simply changing the visual boundaries is enough.
+
+\section{Implementation}
+From a technical perspective, all the interactive demonstrations follow a similar internal structure. Each demo consists of a visual display area and a set of user controls. When a user interacts with a control, such as dragging a slider, an event listener immediately triggers a JavaScript function. 
+\\\\
+This function recalculates the necessary variables and updates the visual elements on the screen dynamically. For example, in the axis truncation demo, moving the slider recalculates the visible height of the bars relative to the new y-axis minimum, and updates the SVG rectangle heights instantly. In the cherry-picking demo, the slider calculates a smooth interpolation between the full dataset view and a zoomed-in timeframe, updating an SVG clipping mask to hide the rest of the timeline. This immediate feedback loop is what makes the demonstrations feel responsive and fluid.
+\newpage
+\section{Tools and Technologies}
+To build these interactive demonstrations, we used a combination of standard web technologies and specific data visualisation libraries. The foundation of the project is written in standard HTML, CSS, and JavaScript. This allowed us to easily integrate the interactive demos directly into our slide deck without needing complex software. For the presentation itself, we used the Rslidy framework, which is a lightweight tool for creating HTML-based presentations.
+\\\\
+When it came to building the charts, we relied heavily on Scalable Vector Graphics (SVG). By manipulating SVG elements with pure JavaScript, we were able to create completely custom animations and interactive features for most of our examples, such as the cherry-picking line chart and the perspective distortion pie chart. 
+\\\\
+For some of the more complex visualisations, we used external JavaScript libraries to save time and ensure accuracy. We used Chart.js to build the bar chart for the time gap demo because it provides smooth, built-in animations that made it easy to hide and show specific years. For the colour mapping demo, we used D3.js along with TopoJSON to render an interactive map of the United States. This allowed us to dynamically switch between a proper sequential colour palette and a misleading rainbow palette.
+
+\section{Challenges}
+Developing these interactive demonstrations presented several technical and design challenges. One of the primary technical hurdles was the mathematical complexity involved in rendering custom SVGs from scratch. For instance, the perspective distortion demo required complex trigonometry to calculate the correct arcs, ellipses, and depth lines to simulate a tilted three-dimensional pie chart without relying on a dedicated 3D library. 
+\\\\
+Another significant challenge was designing smooth transitions between the "honest" and "dishonest" states. In the cherry-picking and artificial steepening demos, the transition needed to be fluid so the viewer could visually track exactly how the data representation was being altered. Calculating the intermediate steps for the axis scaling, bounding boxes, and data point positions required careful tuning of the JavaScript logic to ensure the animations felt natural.
+\\\\
+Finally, ensuring that the visualisations remained responsive and legible across different screen sizes required extensive CSS styling and the careful use of the SVG \texttt{viewBox} attribute. Balancing the interactive controls, such as the sliders and toggle switches, with the visual output to create an intuitive and educational user experience took several iterations to get right.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
